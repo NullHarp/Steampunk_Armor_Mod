@@ -1,4 +1,5 @@
 {
   "item.steampunk.copper_ingot" : "Copper Ingot",
+  "block.steampunk.copper_ore_block" : "Copper Ore",
   "itemGroup.steampunkArmor" : "Steampunk Armor"
 }
