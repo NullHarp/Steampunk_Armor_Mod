@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "steampunk:raw_titanium_ingot"
+  },
+  "result": "steampunk:titanium_ingot",
+  "experience": 0.0,
+  "cookingtime": 200
+}

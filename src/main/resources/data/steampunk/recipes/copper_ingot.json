@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "steampunk:copper_ore_block"
+  },
+  "result": "steampunk:copper_ingot",
+  "experience": 0.0,
+  "cookingtime": 200
+}

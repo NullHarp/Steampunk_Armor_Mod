@@ -4,6 +4,7 @@ import com.nullharp.steampunk.Steampunk;
 import com.nullharp.steampunk.armor.Copper;
 import com.nullharp.steampunk.blocks.BlockItemBase;
 import com.nullharp.steampunk.blocks.CopperOreBlock;
+import com.nullharp.steampunk.blocks.TitaniumOreBlock;
 import com.nullharp.steampunk.items.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -29,8 +30,11 @@ public class RegistryHandler {
 
     // Items only
     public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", ItemBase::new);
+    public static final RegistryObject<Item> RAW_STEEL_INGOT = ITEMS.register("raw_steel_ingot", ItemBase::new);
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", ItemBase::new);
+    public static final RegistryObject<Item> RAW_TITANIUM_INGOT = ITEMS.register("raw_titanium_ingot", ItemBase::new);
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", ItemBase::new);
+    public static final RegistryObject<Item> TITANIUM_COPPER_INGOT = ITEMS.register("titanium_copper_ingot", ItemBase::new);
 
     // Armor
     public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
@@ -44,8 +48,10 @@ public class RegistryHandler {
 
     // Blocks only
     public static final RegistryObject<Block> COPPER_ORE_BLOCK = BLOCKS.register("copper_ore_block", CopperOreBlock::new);
+    public static final RegistryObject<Block> TITANIUM_ORE_BLOCK = BLOCKS.register("titanium_ore_block", TitaniumOreBlock::new);
 
     // Block Items
     public static final RegistryObject<Item> COPPER_ORE_BLOCK_ITEM = ITEMS.register("copper_ore_block", () -> new BlockItemBase(COPPER_ORE_BLOCK.get()));
+    public static final RegistryObject<Item> TITANIUM_ORE_BLOCK_ITEM = ITEMS.register("titanium_ore_block", () -> new BlockItemBase(TITANIUM_ORE_BLOCK.get()));
 
 }

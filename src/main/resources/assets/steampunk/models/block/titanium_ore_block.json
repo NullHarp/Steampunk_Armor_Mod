@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "steampunk:blocks/titanium_ore_block"
+  }
+}
