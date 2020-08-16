@@ -5,7 +5,6 @@ import com.nullharp.steampunk.blocks.BlockItemBase;
 import com.nullharp.steampunk.blocks.CopperOreBlock;
 import com.nullharp.steampunk.items.ItemBase;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,6 +25,9 @@ public class RegistryHandler {
 
     // Items only
     public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", ItemBase::new);
+    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", ItemBase::new);
+    public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", ItemBase::new);
+
 
     // Blocks only
     public static final RegistryObject<Block> COPPER_ORE_BLOCK = BLOCKS.register("copper_ore_block", CopperOreBlock::new);
