@@ -1,4 +1,9 @@
 {
+  "itemGroup.steampunkArmor" : "Steampunk Armor",
+
   "item.steampunk.copper_ingot" : "Copper Ingot",
-  "itemGroup.steampunkArmor" : "Steampunk Armor"
+  "item.steampunk.copper_helmet" : "Copper Helmet",
+  "item.steampunk.copper_chestplate" : "Copper Chestplate",
+  "item.steampunk.copper_leggings" : "Copper Leggings",
+  "item.steampunk.copper_boots" : "Copper Boots"
 }

@@ -1,11 +1,14 @@
 package com.nullharp.steampunk.util;
 
 import com.nullharp.steampunk.Steampunk;
+import com.nullharp.steampunk.armor.Copper;
 import com.nullharp.steampunk.blocks.BlockItemBase;
 import com.nullharp.steampunk.blocks.CopperOreBlock;
 import com.nullharp.steampunk.items.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,6 +29,16 @@ public class RegistryHandler {
 
     // Items only
     public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", ItemBase::new);
+
+    // Armor
+    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
+            new ArmorItem(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB)));
+    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () ->
+            new ArmorItem(Copper.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(Steampunk.TAB)));
+    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () ->
+            new ArmorItem(Copper.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(Steampunk.TAB)));
+    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
+            new ArmorItem(Copper.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(Steampunk.TAB)));
 
     // Blocks only
     public static final RegistryObject<Block> COPPER_ORE_BLOCK = BLOCKS.register("copper_ore_block", CopperOreBlock::new);
