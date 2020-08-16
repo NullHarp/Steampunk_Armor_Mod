@@ -1,6 +1,8 @@
 {
   "itemGroup.steampunkArmor" : "Steampunk Armor",
   "item.steampunk.copper_ingot" : "Copper Ingot",
+  "item.steampunk.steel_ingot" : "Steel Ingot",
+  "item.steampunk.titanium_ingot" : "Titanium Ingot",
   "block.steampunk.copper_ore_block" : "Copper Ore",
   "itemGroup.steampunkArmor" : "Steampunk Armor",
   "item.steampunk.copper_helmet" : "Copper Helmet",
