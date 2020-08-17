@@ -12,10 +12,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
-public enum TitaniumCopper implements IArmorMaterial {
+public enum TitaniumSteel implements IArmorMaterial {
 
-    COPPER(Steampunk.MOD_ID + ":titanium_copper", 50, new int[] { 3, 6, 8, 3 }, 25,
-            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4F, () -> { return Ingredient.fromItems(RegistryHandler.COPPER_INGOT.get()); }
+    TITANIUM_STEEL(Steampunk.MOD_ID + ":titanium_steel", 50, new int[] { 3, 6, 8, 3 }, 25,
+            SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4F, () -> { return Ingredient.fromItems(RegistryHandler.STEEL_INGOT.get()); }
             );
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
@@ -27,7 +27,7 @@ public enum TitaniumCopper implements IArmorMaterial {
     private final float toughness;
     private final Supplier<Ingredient> repairMaterial;
 
-    TitaniumCopper(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantibility, SoundEvent soundEvent, float toughness, Supplier<Ingredient> repairMaterial) {
+    TitaniumSteel(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantibility, SoundEvent soundEvent, float toughness, Supplier<Ingredient> repairMaterial) {
         this.name = name;
         this.maxDamageFactor = maxDamageFactor;
         this.damageReductionAmountArray = damageReductionAmountArray;
