@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xyx",
+    "xzx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "steampunk:titanium_steel_ingot"
+    },
+    "y":
+    {
+      "item": "steampunk:power_core_on"
+    }
+    },
+    "z":
+    {
+      "item": "steampunk:steel_ingot"
+    }
+    },
+    "y": {
+    "item": "steampunk:power_core_on"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:titanium_steel_chestplate",
+    "count": 1
+  }
+}

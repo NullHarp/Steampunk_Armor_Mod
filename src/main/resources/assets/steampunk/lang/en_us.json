@@ -6,7 +6,7 @@
   "item.steampunk.steel_ingot" : "Steel Ingot",
   "item.steampunk.raw_titanium_ingot" : "Raw Titanium Ingot",
   "item.steampunk.titanium_ingot" : "Titanium Ingot",
-  "item.steampunk.titanium_copper_ingot" : "Titanium Infused Copper",
+  "item.steampunk.titanium_steel_ingot" : "Titanium Infused Steel",
 
   "block.steampunk.titanium_ore_block" : "Rutile Ore",
   "block.steampunk.copper_ore_block" : "Copper Ore",
@@ -14,5 +14,14 @@
   "item.steampunk.copper_helmet" : "Copper Helmet",
   "item.steampunk.copper_chestplate" : "Copper Chestplate",
   "item.steampunk.copper_leggings" : "Copper Leggings",
-  "item.steampunk.copper_boots" : "Copper Boots"
+  "item.steampunk.copper_boots" : "Copper Boots",
+
+  "item.steampunk.titanium_steel_helmet" : "Titanium Plated Steel Helmet",
+  "item.steampunk.titanium_steel_chestplate" : "Titanium Plated Steel Chestplate",
+  "item.steampunk.titanium_steel_leggings" : "Titanium Plated Steel Leggings",
+  "item.steampunk.titanium_steel_boots": "Titanium Plated Steel Boots",
+
+  "item.steampunk.power_core_off" : "Empty Power Core",
+  "item.steampunk.power_core_on" : "Charged Power Core"
+
 }

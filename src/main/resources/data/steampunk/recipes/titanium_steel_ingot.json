@@ -10,7 +10,7 @@
   {
     "x":
     {
-      "item": "steampunk:copper_ingot"
+      "item": "steampunk:steel_ingot"
     },
     "y":
     {
@@ -19,7 +19,7 @@
   },
   "result":
   {
-    "item": "steampunk:titanium_copper_ingot",
+    "item": "steampunk:titanium_steel_ingot",
     "count": 2
   }
 }

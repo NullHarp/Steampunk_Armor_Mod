@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "steampunk:items/titanium_copper_ingot"
-  }
-}
