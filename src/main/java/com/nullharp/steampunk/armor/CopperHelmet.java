@@ -6,22 +6,25 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraft.network.rcon.ClientThread;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CopperHelmet extends ArmorItem {
     public CopperHelmet() {
         super(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB));
     }
 
+    @OnlyIn(Dist.CLIENT)
     @Override
-    public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        CopperHelmetModel model = new CopperHelmetModel(1F);
-        model.bipedHeadwear.showModel = armorSlot == EquipmentSlotType.HEAD;
+    public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
+        BipedModel model = new BipedModel(1);
+        model.bipedHead = new CopperHelmetModel(1f).Head;
+        model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
 
-        model.isChild = _default.isChild;
-        model.isSneak = _default.isSneak;
-        model.isSitting = _default.isSitting;
-        model.rightArmPose = _default.rightArmPose;
-        model.leftArmPose = _default.leftArmPose;
+        model.isSneak = livingEntity.isSneaking();
+        model.isSitting = livingEntity.isPassenger();
+        model.isChild = livingEntity.isChild();
 
         return (A) model;
     }

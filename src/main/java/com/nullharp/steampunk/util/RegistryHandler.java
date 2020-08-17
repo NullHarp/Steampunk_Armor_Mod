@@ -1,8 +1,7 @@
 package com.nullharp.steampunk.util;
 
 import com.nullharp.steampunk.Steampunk;
-import com.nullharp.steampunk.armor.Copper;
-import com.nullharp.steampunk.armor.TitaniumSteel;
+import com.nullharp.steampunk.armor.*;
 import com.nullharp.steampunk.blocks.BlockItemBase;
 import com.nullharp.steampunk.blocks.CopperOreBlock;
 import com.nullharp.steampunk.blocks.CreativePowercellBlock;

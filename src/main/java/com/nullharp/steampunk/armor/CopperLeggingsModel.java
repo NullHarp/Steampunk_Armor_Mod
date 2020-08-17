@@ -11,8 +11,8 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
 public class CopperLeggingsModel extends BipedModel<LivingEntity> {
-	private final ModelRenderer RightLeg;
-	private final ModelRenderer LeftLeg;
+	public final ModelRenderer RightLeg;
+	public final ModelRenderer LeftLeg;
 
 	public CopperLeggingsModel(float size) {
 		super(size);

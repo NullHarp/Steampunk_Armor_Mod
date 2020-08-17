@@ -14,15 +14,16 @@ public class CopperLeggings extends ArmorItem {
     }
 
     @Override
-    public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        CopperLeggingsModel model = new CopperLeggingsModel(1F);
-        model.bipedHeadwear.showModel = armorSlot == EquipmentSlotType.LEGS;
+    public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
+        BipedModel model = new BipedModel(1);
+        CopperLeggingsModel tempModel = new CopperLeggingsModel(1f);
+        model.bipedLeftLeg = tempModel.LeftLeg;
+        model.bipedRightLeg = tempModel.RightLeg;
+        model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
 
-        model.isChild = _default.isChild;
-        model.isSneak = _default.isSneak;
-        model.isSitting = _default.isSitting;
-        model.rightArmPose = _default.rightArmPose;
-        model.leftArmPose = _default.leftArmPose;
+        model.isSneak = livingEntity.isSneaking();
+        model.isSitting = livingEntity.isPassenger();
+        model.isChild = livingEntity.isChild();
 
         return (A) model;
     }

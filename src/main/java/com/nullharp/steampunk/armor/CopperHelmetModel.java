@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 
 public class CopperHelmetModel extends BipedModel<LivingEntity> {
-	private final ModelRenderer Head;
+	public final ModelRenderer Head;
 	private final ModelRenderer Eye;
 	private final ModelRenderer PipesR;
 	private final ModelRenderer PipesL;
@@ -29,7 +29,6 @@ public class CopperHelmetModel extends BipedModel<LivingEntity> {
 
 		Head = new ModelRenderer(this);
 		Head.setRotationPoint(0.0F, 0.0F, 0.0F);
-		this.bipedHead.addChild(Head);
 		Head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.525F, false);
 		Head.setTextureOffset(0, 0).addBox(1.75F, -5.625F, -4.75F, 1.0F, 1.0F, 1.0F, -0.2F, false);
 		Head.setTextureOffset(32, 6).addBox(-3.5F, -4.25F, -6.0F, 7.0F, 7.0F, 3.0F, -2.0F, false);
