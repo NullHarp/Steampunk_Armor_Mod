@@ -1,0 +1,18 @@
+{
+  "item.stickbug_disk" :{
+    "category" : "item",
+    "subtitle" : "item.stickbug_disk.sub",
+    "sounds" : [
+      {
+        "name" : "steampunk:item/stickbug_disk",
+        "stream" : "true"
+      }
+    ]
+
+  }
+
+
+
+
+
+}

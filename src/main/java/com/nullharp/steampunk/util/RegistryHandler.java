@@ -1,5 +1,6 @@
 package com.nullharp.steampunk.util;
 
+import com.nullharp.steampunk.SoundList;
 import com.nullharp.steampunk.Steampunk;
 import com.nullharp.steampunk.armor.*;
 import com.nullharp.steampunk.blocks.BlockItemBase;
@@ -7,8 +8,8 @@ import com.nullharp.steampunk.blocks.CopperOreBlock;
 import com.nullharp.steampunk.blocks.CreativePowercellBlock;
 import com.nullharp.steampunk.blocks.TitaniumOreBlock;
 import com.nullharp.steampunk.items.ItemBase;
+import com.nullharp.steampunk.items.StickBugDisk;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -37,7 +38,11 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", ItemBase::new);
     public static final RegistryObject<Item> TITANIUM_STEEL_INGOT = ITEMS.register("titanium_steel_ingot", ItemBase::new);
 
-    // Forge Energey Items
+    // Music Disk Items
+    public static final RegistryObject<Item> STICKBUG_DISK = ITEMS.register("stickbug_disk", () -> new StickBugDisk(1, SoundList.MUSIC_DISK_STICKBUG_LAZY.get(), new Item.Properties().maxStackSize(1).group(Steampunk.TAB)));
+
+
+    // Forge Energy Items
 
     public static final RegistryObject<Item> POWER_CORE_OFF = ITEMS.register("power_core_off", ItemBase::new);
     public static final RegistryObject<Item> POWER_CORE_ON = ITEMS.register("power_core_on", ItemBase::new);

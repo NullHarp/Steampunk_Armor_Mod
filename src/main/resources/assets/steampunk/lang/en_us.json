@@ -22,6 +22,8 @@
   "item.steampunk.titanium_steel_boots": "Titanium Plated Steel Boots",
 
   "item.steampunk.power_core_off" : "Empty Power Core",
-  "item.steampunk.power_core_on" : "Charged Power Core"
+  "item.steampunk.power_core_on" : "Charged Power Core",
 
+  "item.steampunk.stickbug_disk" : "§bMusic Disc",
+  "item.steampunk.stickbug_disk.desc" : "Onett - stickbug"
 }
