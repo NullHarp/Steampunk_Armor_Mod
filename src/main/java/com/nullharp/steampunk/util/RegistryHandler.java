@@ -1,7 +1,7 @@
 package com.nullharp.steampunk.util;
 
 import com.nullharp.steampunk.Steampunk;
-import com.nullharp.steampunk.armor.Copper;
+import com.nullharp.steampunk.armor.*;
 import com.nullharp.steampunk.blocks.BlockItemBase;
 import com.nullharp.steampunk.blocks.CopperOreBlock;
 import com.nullharp.steampunk.blocks.TitaniumOreBlock;
@@ -37,14 +37,16 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TITANIUM_COPPER_INGOT = ITEMS.register("titanium_copper_ingot", ItemBase::new);
 
     // Armor
+//    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
+//            new ArmorItem(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB)));
     public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () ->
-            new ArmorItem(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB)));
+            new CopperHelmet());
     public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () ->
-            new ArmorItem(Copper.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(Steampunk.TAB)));
+            new CopperChestplate());
     public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () ->
-            new ArmorItem(Copper.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(Steampunk.TAB)));
+            new CopperLeggings());
     public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () ->
-            new ArmorItem(Copper.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(Steampunk.TAB)));
+            new CopperBoots());
 
     // Blocks only
     public static final RegistryObject<Block> COPPER_ORE_BLOCK = BLOCKS.register("copper_ore_block", CopperOreBlock::new);
