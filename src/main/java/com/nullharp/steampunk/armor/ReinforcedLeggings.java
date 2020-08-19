@@ -5,20 +5,20 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ItemStack;
 
-public class CopperHelmet extends ArmorItem {
-    public CopperHelmet() {
-        super(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB));
+public class ReinforcedLeggings extends ArmorItem {
+    public ReinforcedLeggings() {
+        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.TAB));
     }
 
-    @OnlyIn(Dist.CLIENT)
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         BipedModel model = new BipedModel(1);
-        model.bipedHead = new CopperArmorModel(1f).Head;
+        IronArmorModel tempModel = new IronArmorModel(1f);
+        model.bipedLeftLeg = tempModel.LeftLeg;
+        model.bipedRightLeg = tempModel.RightLeg;
         model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
 
         model.isSneak = livingEntity.isSneaking();
@@ -31,6 +31,6 @@ public class CopperHelmet extends ArmorItem {
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type)
     {
-        return Steampunk.MOD_ID+":textures/models/armor/copper_armor.png";
+        return Steampunk.MOD_ID+":textures/models/armor/reinforced_armor.png";
     }
 }

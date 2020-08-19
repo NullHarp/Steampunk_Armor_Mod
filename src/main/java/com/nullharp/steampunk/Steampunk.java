@@ -27,29 +27,16 @@ public class Steampunk
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
+    private void setup(final FMLCommonSetupEvent event) {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-
-
-
-
-
     }
 
     public static final ItemGroup TAB = new ItemGroup("steampunkArmor") {
-
-
         @Override
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.STEEL_INGOT.get());
         }
     };
-
-
-
-
 }
