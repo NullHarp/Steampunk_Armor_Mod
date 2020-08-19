@@ -16,7 +16,7 @@ public class CopperLeggings extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         BipedModel model = new BipedModel(1);
-        CopperLeggingsModel tempModel = new CopperLeggingsModel(1f);
+        CopperArmorModel tempModel = new CopperArmorModel(1f);
         model.bipedLeftLeg = tempModel.LeftLeg;
         model.bipedRightLeg = tempModel.RightLeg;
         model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
@@ -31,6 +31,6 @@ public class CopperLeggings extends ArmorItem {
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type)
     {
-        return Steampunk.MOD_ID+":textures/models/armor/iron_boots.png";
+        return Steampunk.MOD_ID+":textures/models/armor/copper_armor.png";
     }
 }
