@@ -4,6 +4,7 @@ import com.nullharp.steampunk.Steampunk;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
@@ -15,12 +16,11 @@ public class ReinforcedChestplate extends ArmorItem {
 
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        BipedModel model = new BipedModel(1);
-        IronArmorModel tempModel = new IronArmorModel(1f);
+        BipedModel<LivingEntity> model = new BipedModel<LivingEntity>(1);
+        IronArmorModel tempModel = new IronArmorModel();
         model.bipedBody = tempModel.Body;
-        model.bipedLeftArm = tempModel.LeftArm;
-        model.bipedRightArm = tempModel.RightArm;
-        model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
+        model.bipedLeftArm.addChild(tempModel.LeftArm);
+        model.bipedRightArm.addChild(tempModel.RightArm);
 
         model.isSneak = livingEntity.isSneaking();
         model.isSitting = livingEntity.isPassenger();

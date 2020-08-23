@@ -16,10 +16,9 @@ public class ReinforcedBoots extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         BipedModel model = new BipedModel(1);
-        IronArmorModel tempModel = new IronArmorModel(1f);
-        model.bipedLeftLeg = tempModel.LeftLeg;
-        model.bipedRightLeg = tempModel.RightLeg;
-        model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
+        IronArmorModel tempModel = new IronArmorModel();
+        model.bipedLeftLeg = tempModel.LeftBoot;
+        model.bipedRightLeg = tempModel.RightBoot;
 
         model.isSneak = livingEntity.isSneaking();
         model.isSitting = livingEntity.isPassenger();

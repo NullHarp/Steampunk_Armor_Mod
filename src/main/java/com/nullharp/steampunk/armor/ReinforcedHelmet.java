@@ -5,8 +5,7 @@ import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -18,9 +17,8 @@ public class ReinforcedHelmet extends ArmorItem {
     @OnlyIn(Dist.CLIENT)
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        BipedModel model = new BipedModel(1);
-        model.bipedHead = new IronArmorModel(1f).Head;
-        model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
+        BipedModel<LivingEntity> model = new BipedModel<>(1);
+        model.bipedHead = new IronArmorModel().Head;
 
         model.isSneak = livingEntity.isSneaking();
         model.isSitting = livingEntity.isPassenger();

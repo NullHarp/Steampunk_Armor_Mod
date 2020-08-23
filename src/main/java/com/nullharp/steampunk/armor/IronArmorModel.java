@@ -1,18 +1,16 @@
-package com.nullharp.steampunk.armor;// Made with Blockbench 3.6.6
-// Exported for Minecraft version 1.15
-// Paste this class into your mod and generate all required imports
-
+package com.nullharp.steampunk.armor;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 
-public class IronArmorModel extends BipedModel<LivingEntity> {
+public class IronArmorModel extends EntityModel<Entity> {
 	public final ModelRenderer RightLeg;
 	public final ModelRenderer LeftLeg;
+	public final ModelRenderer RightBoot;
+	public final ModelRenderer LeftBoot;
 	public final ModelRenderer Body;
 	private final ModelRenderer AngledPlate;
 	private final ModelRenderer AngledPlate2;
@@ -36,16 +34,13 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 	private final ModelRenderer AngleBack3;
 	private final ModelRenderer AngleBack4;
 
-	public IronArmorModel(float size) {
-		super(size);
-
+	public IronArmorModel() {
 		textureWidth = 128;
 		textureHeight = 128;
 
 		RightLeg = new ModelRenderer(this);
 		RightLeg.setRotationPoint(2.0F, 12.0F, 0.0F);
 		RightLeg.setTextureOffset(0, 16).addBox(-6.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.475F, false);
-		RightLeg.setTextureOffset(0, 32).addBox(-7.0F, 8.75F, -4.0F, 6.0F, 4.0F, 7.0F, -0.45F, false);
 		RightLeg.setTextureOffset(63, 14).addBox(-6.0F, 0.0F, -2.625F, 4.0F, 3.0F, 1.0F, -0.05F, false);
 		RightLeg.setTextureOffset(63, 14).addBox(-6.0F, 6.0F, -2.625F, 4.0F, 3.0F, 1.0F, -0.05F, false);
 		RightLeg.setTextureOffset(9, 39).addBox(-5.5F, 3.5F, -2.625F, 3.0F, 2.0F, 1.0F, -0.05F, false);
@@ -59,7 +54,6 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 		LeftLeg = new ModelRenderer(this);
 		LeftLeg.setRotationPoint(-2.0F, 12.0F, 0.0F);
 		LeftLeg.setTextureOffset(16, 48).addBox(2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.475F, false);
-		LeftLeg.setTextureOffset(0, 32).addBox(1.0F, 8.75F, -4.0F, 6.0F, 4.0F, 7.0F, -0.45F, false);
 		LeftLeg.setTextureOffset(63, 14).addBox(2.0F, 0.0F, -2.625F, 4.0F, 3.0F, 1.0F, -0.05F, false);
 		LeftLeg.setTextureOffset(63, 14).addBox(2.0F, 6.0F, -2.625F, 4.0F, 3.0F, 1.0F, -0.05F, false);
 		LeftLeg.setTextureOffset(9, 39).addBox(2.5F, 3.5F, -2.625F, 3.0F, 2.0F, 1.0F, -0.05F, false);
@@ -70,13 +64,19 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 		LeftLeg.setTextureOffset(63, 14).addBox(1.4F, 0.0F, -2.0F, 1.0F, 3.0F, 4.0F, -0.05F, false);
 		LeftLeg.setTextureOffset(63, 14).addBox(5.625F, 6.0F, -2.0F, 1.0F, 3.0F, 4.0F, -0.05F, false);
 
+		RightBoot = new ModelRenderer(this);
+		RightBoot.setTextureOffset(0, 32).addBox(-5.0F, 8.75F, -4.0F, 6.0F, 4.0F, 7.0F, -0.45F, false);
+
+		LeftBoot = new ModelRenderer(this);
+		LeftBoot.setTextureOffset(0, 32).addBox(-1.0F, 8.75F, -4.0F, 6.0F, 4.0F, 7.0F, -0.45F, false);
+
 		Body = new ModelRenderer(this);
 		Body.setRotationPoint(-2.0F, 12.0F, 0.0F);
 		Body.setTextureOffset(52, 9).addBox(-0.5F, 3.5F, -3.0F, 5.0F, 5.0F, 1.0F, -0.75F, false);
 		Body.setTextureOffset(16, 16).addBox(-2.0F, -0.5F, -2.0F, 8.0F, 12.0F, 4.0F, 0.5F, false);
 		Body.setTextureOffset(63, 14).addBox(-2.25F, 5.5F, -2.625F, 2.0F, 3.0F, 1.0F, 0.0F, false);
 		Body.setTextureOffset(63, 14).addBox(4.25F, 5.5F, -2.625F, 2.0F, 3.0F, 1.0F, 0.0F, false);
-		Body.setTextureOffset(63, 14).addBox(-2.0F, 1.5F, 1.625F, 8.0F, 10.0F, 1.0F, 0.0F, false);
+		Body.setTextureOffset(59, 15).addBox(-2.0F, 1.5F, 1.625F, 8.0F, 10.0F, 1.0F, 0.0F, false);
 
 		AngledPlate = new ModelRenderer(this);
 		AngledPlate.setRotationPoint(0.0F, 0.0F, -3.0F);
@@ -114,19 +114,19 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 		Head.setTextureOffset(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, 0.525F, false);
 		Head.setTextureOffset(0, 0).addBox(1.75F, -5.625F, -4.75F, 1.0F, 1.0F, 1.0F, -0.2F, false);
 		Head.setTextureOffset(32, 6).addBox(-3.5F, -4.25F, -6.0F, 7.0F, 7.0F, 3.0F, -2.0F, false);
-		Head.setTextureOffset(49, 0).addBox(-3.475F, -4.25F, -5.175F, 7.0F, 7.0F, 2.0F, -1.9F, false);
+		Head.setTextureOffset(26, 32).addBox(-3.475F, -4.25F, -7.175F, 7.0F, 7.0F, 6.0F, -1.9F, false);
 
 		Eye = new ModelRenderer(this);
 		Eye.setRotationPoint(0.0F, -5.0F, 0.0F);
 		Head.addChild(Eye);
-		Eye.setTextureOffset(24, 0).addBox(-4.75F, -2.25F, -5.5F, 5.0F, 2.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(-4.375F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(-4.75F, 0.0F, -5.5F, 5.0F, 2.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(-2.125F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(-0.25F, -2.25F, -5.5F, 5.0F, 2.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(0.125F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(-0.25F, 0.0F, -5.5F, 5.0F, 2.0F, 2.0F, -1.125F, false);
-		Eye.setTextureOffset(24, 0).addBox(2.375F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -1.125F, false);
+		Eye.setTextureOffset(24, 0).addBox(-4.75F, -2.25F, -5.5F, 5.0F, 2.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(-4.375F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(-4.75F, 0.0F, -5.5F, 5.0F, 2.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(-2.125F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(-0.25F, -2.25F, -5.5F, 5.0F, 2.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(0.125F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(-0.25F, 0.0F, -5.5F, 5.0F, 2.0F, 2.0F, -0.9F, false);
+		Eye.setTextureOffset(24, 0).addBox(2.375F, -2.625F, -5.55F, 2.0F, 5.0F, 2.0F, -0.9F, false);
 
 		PipesR = new ModelRenderer(this);
 		PipesR.setRotationPoint(-2.75F, -2.25F, 0.5F);
@@ -187,7 +187,7 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 		GearsRot2.setTextureOffset(24, 1).addBox(-2.5F, -0.5F, 4.0F, 5.0F, 1.0F, 1.0F, -0.25F, false);
 
 		LeftArm = new ModelRenderer(this);
-		LeftArm.setRotationPoint(-11.0F, 13.5F, 0.0F);
+		LeftArm.setRotationPoint(-9.75F, 0.0F, 0.0F);
 		LeftArm.setTextureOffset(32, 48).addBox(9.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.45F, false);
 
 		Angle = new ModelRenderer(this);
@@ -213,7 +213,7 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 		AngleBack2.setTextureOffset(63, 14).addBox(-2.5F, 3.4615F, 0.8653F, 5.0F, 3.0F, 1.0F, 0.0F, false);
 
 		RightArm = new ModelRenderer(this);
-		RightArm.setRotationPoint(9.0F, 13.5F, 0.0F);
+		RightArm.setRotationPoint(9.75F, 0.0F, 0.0F);
 		RightArm.setTextureOffset(40, 16).addBox(-13.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, 0.45F, false);
 
 		Angle2 = new ModelRenderer(this);
@@ -237,6 +237,11 @@ public class IronArmorModel extends BipedModel<LivingEntity> {
 		setRotationAngle(AngleBack4, 0.1745F, 0.0F, 0.0F);
 		AngleBack4.setTextureOffset(63, 14).addBox(-5.0F, 3.4848F, -2.8849F, 5.0F, 3.0F, 1.0F, 0.0F, false);
 		AngleBack4.setTextureOffset(63, 14).addBox(-5.0F, 0.5071F, -2.3863F, 5.0F, 3.0F, 1.0F, 0.0F, false);
+	}
+
+	@Override
+	public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
+		//previously the render function, render code was moved to a method below
 	}
 
 	@Override

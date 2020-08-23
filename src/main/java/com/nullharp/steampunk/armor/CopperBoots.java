@@ -16,10 +16,9 @@ public class CopperBoots extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         BipedModel model = new BipedModel(1);
-        CopperArmorModel tempModel = new CopperArmorModel(1f);
-        model.bipedLeftLeg = tempModel.LeftLeg;
-        model.bipedRightLeg = tempModel.RightLeg;
-        model.bipedHead.showModel = slot == EquipmentSlotType.HEAD;
+        CopperArmorModel tempModel = new CopperArmorModel();
+        model.bipedLeftLeg = tempModel.LeftBoot;
+        model.bipedRightLeg = tempModel.RightBoot;
 
         model.isSneak = livingEntity.isSneaking();
         model.isSitting = livingEntity.isPassenger();
