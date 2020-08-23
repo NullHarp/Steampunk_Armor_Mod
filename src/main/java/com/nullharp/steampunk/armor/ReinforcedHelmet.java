@@ -10,6 +10,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ReinforcedHelmet extends ArmorItem {
+    private BipedModel<LivingEntity> model = null;
+
     public ReinforcedHelmet() {
         super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.TAB));
     }
@@ -17,12 +19,14 @@ public class ReinforcedHelmet extends ArmorItem {
     @OnlyIn(Dist.CLIENT)
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        BipedModel<LivingEntity> model = new BipedModel<>(1);
-        model.bipedHead = new IronArmorModel().Head;
+        if(this.model == null) {
+            this.model = new BipedModel(1);
+            model.bipedHead = new IronArmorModel().Head;
 
-        model.isSneak = livingEntity.isSneaking();
-        model.isSitting = livingEntity.isPassenger();
-        model.isChild = livingEntity.isChild();
+            model.isSneak = livingEntity.isSneaking();
+            model.isSitting = livingEntity.isPassenger();
+            model.isChild = livingEntity.isChild();
+        }
 
         return (A) model;
     }
