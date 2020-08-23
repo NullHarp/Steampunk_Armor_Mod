@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 
 public class CopperLeggings extends ArmorItem {
     public CopperLeggings() {
-        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.MAIN));
     }
 
     @Override

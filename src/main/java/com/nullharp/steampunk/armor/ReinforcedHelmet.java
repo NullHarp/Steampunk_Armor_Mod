@@ -12,7 +12,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ReinforcedHelmet extends ArmorItem {
     public ReinforcedHelmet() {
-        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.MAIN));
     }
 
     @OnlyIn(Dist.CLIENT)

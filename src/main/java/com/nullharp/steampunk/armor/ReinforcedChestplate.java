@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 
 public class ReinforcedChestplate extends ArmorItem {
     public ReinforcedChestplate() {
-        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.MAIN));
     }
 
     @Override

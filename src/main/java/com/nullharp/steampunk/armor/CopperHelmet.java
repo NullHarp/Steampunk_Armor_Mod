@@ -11,7 +11,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CopperHelmet extends ArmorItem {
     public CopperHelmet() {
-        super(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.MAIN));
     }
 
     @OnlyIn(Dist.CLIENT)

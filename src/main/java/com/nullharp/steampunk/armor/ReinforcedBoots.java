@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 
 public class ReinforcedBoots extends ArmorItem {
     public ReinforcedBoots() {
-        super(Copper.COPPER, EquipmentSlotType.FEET, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.FEET, new Properties().group(Steampunk.MAIN));
     }
 
     @Override

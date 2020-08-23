@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 
 public class CopperChestplate extends ArmorItem {
     public CopperChestplate() {
-        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.MAIN));
     }
 
     @Override
