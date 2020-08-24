@@ -1,5 +1,6 @@
 package com.nullharp.steampunk;
 
+import com.nullharp.steampunk.armor.ClientReference;
 import com.nullharp.steampunk.util.RegistryHandler;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("steampunk")
 public class Steampunk
 {
+    public static final ClientReference SIDED_SYSTEM = new ClientReference();
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "steampunk";
