@@ -9,23 +9,20 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
 public class ReinforcedLeggings extends ArmorItem {
-    private BipedModel<LivingEntity> model = null;
     public ReinforcedLeggings() {
         super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.MAIN));
     }
 
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        if(this.model == null) {
-            this.model = new BipedModel<>(1);
-            PlatedArmorModel tempModel = new PlatedArmorModel();
-            model.bipedLeftLeg = tempModel.LeftLeg;
-            model.bipedRightLeg = tempModel.RightLeg;
+        BipedModel<LivingEntity> model = new BipedModel<>(1);
+        PlatedArmorModel tempModel = new PlatedArmorModel();
+        model.bipedLeftLeg = tempModel.LeftLeg;
+        model.bipedRightLeg = tempModel.RightLeg;
 
-            model.isSneak = livingEntity.isSneaking();
-            model.isSitting = livingEntity.isPassenger();
-            model.isChild = livingEntity.isChild();
-        }
+        model.isSneak = livingEntity.isSneaking();
+        model.isSitting = livingEntity.isPassenger();
+        model.isChild = livingEntity.isChild();
 
         return (A) model;
     }

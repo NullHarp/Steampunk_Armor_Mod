@@ -11,8 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class TitaniumHelmet extends ArmorItem {
-    private BipedModel<LivingEntity> model = null;
-
     public TitaniumHelmet() {
         super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.MAIN));
     }
@@ -20,14 +18,12 @@ public class TitaniumHelmet extends ArmorItem {
     @OnlyIn(Dist.CLIENT)
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        if(this.model == null) {
-            this.model = new BipedModel<>(1);
-            model.bipedHead = new PlatedArmorModel().Head;
+        BipedModel<LivingEntity> model = new BipedModel<>(1);
+        model.bipedHead = new PlatedArmorModel().Head;
 
-            model.isSneak = livingEntity.isSneaking();
-            model.isSitting = livingEntity.isPassenger();
-            model.isChild = livingEntity.isChild();
-        }
+        model.isSneak = livingEntity.isSneaking();
+        model.isSitting = livingEntity.isPassenger();
+        model.isChild = livingEntity.isChild();
 
         return (A) model;
     }

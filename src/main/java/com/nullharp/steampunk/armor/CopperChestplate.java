@@ -9,27 +9,23 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
 public class CopperChestplate extends ArmorItem {
-    private BipedModel<LivingEntity> model = null;
-
     public CopperChestplate() {
         super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.MAIN));
     }
 
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        if(this.model == null) {
-            this.model = new BipedModel<>(1);
-            CopperArmorModel tempModel = new CopperArmorModel();
-            model.bipedBody = tempModel.Body;
-            model.bipedLeftArm.addChild(tempModel.LeftArm);
-            model.bipedRightArm.addChild(tempModel.RightArm);
+        BipedModel<LivingEntity> model = new BipedModel<>(1);
+        CopperArmorModel tempModel = new CopperArmorModel();
+        model.bipedBody = tempModel.Body;
+        model.bipedLeftArm.addChild(tempModel.LeftArm);
+        model.bipedRightArm.addChild(tempModel.RightArm);
 
-            model.isSneak = livingEntity.isSneaking();
-            model.isSitting = livingEntity.isPassenger();
-            model.isChild = livingEntity.isChild();
-        }
+        model.isSneak = livingEntity.isSneaking();
+        model.isSitting = livingEntity.isPassenger();
+        model.isChild = livingEntity.isChild();
 
-        return (A) this.model;
+        return (A) model;
     }
 
     @Override
