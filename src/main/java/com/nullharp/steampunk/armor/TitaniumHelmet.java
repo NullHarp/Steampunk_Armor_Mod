@@ -14,7 +14,7 @@ public class TitaniumHelmet extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
 
     public TitaniumHelmet() {
-        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.MAIN));
     }
 
     @OnlyIn(Dist.CLIENT)
