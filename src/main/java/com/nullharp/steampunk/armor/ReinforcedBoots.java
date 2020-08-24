@@ -18,8 +18,8 @@ public class ReinforcedBoots extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         if(this.model == null) {
-            this.model = new BipedModel(1);
-            IronArmorModel tempModel = new IronArmorModel();
+            this.model = new BipedModel<>(1);
+            PlatedArmorModel tempModel = new PlatedArmorModel();
             model.bipedLeftLeg = tempModel.LeftBoot;
             model.bipedRightLeg = tempModel.RightBoot;
 

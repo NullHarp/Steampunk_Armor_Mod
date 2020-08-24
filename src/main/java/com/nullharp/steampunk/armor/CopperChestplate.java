@@ -18,7 +18,7 @@ public class CopperChestplate extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         if(this.model == null) {
-            this.model = new BipedModel(1);
+            this.model = new BipedModel<>(1);
             CopperArmorModel tempModel = new CopperArmorModel();
             model.bipedBody = tempModel.Body;
             model.bipedLeftArm.addChild(tempModel.LeftArm);

@@ -4,7 +4,6 @@ import com.nullharp.steampunk.Steampunk;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
@@ -19,8 +18,8 @@ public class ReinforcedChestplate extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         if(this.model == null) {
-            this.model = new BipedModel (1);
-            IronArmorModel tempModel = new IronArmorModel();
+            this.model = new BipedModel<>(1);
+            PlatedArmorModel tempModel = new PlatedArmorModel();
             model.bipedBody = tempModel.Body;
             model.bipedLeftArm.addChild(tempModel.LeftArm);
             model.bipedRightArm.addChild(tempModel.RightArm);

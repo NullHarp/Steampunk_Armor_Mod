@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class IronArmorModel extends EntityModel<Entity> {
+public class PlatedArmorModel extends EntityModel<Entity> {
 	public final ModelRenderer RightLeg;
 	public final ModelRenderer LeftLeg;
 	public final ModelRenderer RightBoot;
@@ -34,7 +34,7 @@ public class IronArmorModel extends EntityModel<Entity> {
 	private final ModelRenderer AngleBack3;
 	private final ModelRenderer AngleBack4;
 
-	public IronArmorModel() {
+	public PlatedArmorModel() {
 		textureWidth = 128;
 		textureHeight = 128;
 

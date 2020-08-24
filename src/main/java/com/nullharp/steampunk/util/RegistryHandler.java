@@ -61,14 +61,10 @@ public class RegistryHandler {
         public static final RegistryObject<ArmorItem> REINFORCED_BOOTS = ITEMS.register("reinforced_boots", ReinforcedBoots::new);
 
         // Titanium Infused Steel
-        public static final RegistryObject<ArmorItem> TITANIUM_STEEL_HELMET = ITEMS.register("titanium_steel_helmet", () ->
-                new ArmorItem(TitaniumSteel.TITANIUM_STEEL, EquipmentSlotType.HEAD, new Item.Properties().group(Steampunk.TAB)));
-        public static final RegistryObject<ArmorItem> TITANIUM_STEEL_CHESTPLATE = ITEMS.register("titanium_steel_chestplate", () ->
-            new ArmorItem(TitaniumSteel.TITANIUM_STEEL, EquipmentSlotType.CHEST, new Item.Properties().group(Steampunk.TAB)));
-        public static final RegistryObject<ArmorItem> TITANIUM_STEEL_LEGGINGS = ITEMS.register("titanium_steel_leggings", () ->
-            new ArmorItem(TitaniumSteel.TITANIUM_STEEL, EquipmentSlotType.LEGS, new Item.Properties().group(Steampunk.TAB)));
-        public static final RegistryObject<ArmorItem> TITANIUM_STEEL_BOOTS = ITEMS.register("titanium_steel_boots", () ->
-            new ArmorItem(TitaniumSteel.TITANIUM_STEEL, EquipmentSlotType.FEET, new Item.Properties().group(Steampunk.TAB)));
+        public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet", TitaniumHelmet::new);
+        public static final RegistryObject<ArmorItem> TITANIUM_CHESPLATE = ITEMS.register("titanium_chestplate", TitaniumChestplate::new);
+        public static final RegistryObject<ArmorItem> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings", TitaniumLeggings::new);
+        public static final RegistryObject<ArmorItem> TITANIUM_BOOTS = ITEMS.register("titanium_boots", TitaniumBoots::new);
 
 
 

@@ -7,20 +7,22 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ReinforcedLeggings extends ArmorItem {
+public class TitaniumHelmet extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
-    public ReinforcedLeggings() {
-        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.TAB));
+
+    public TitaniumHelmet() {
+        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.TAB));
     }
 
+    @OnlyIn(Dist.CLIENT)
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         if(this.model == null) {
             this.model = new BipedModel<>(1);
-            PlatedArmorModel tempModel = new PlatedArmorModel();
-            model.bipedLeftLeg = tempModel.LeftLeg;
-            model.bipedRightLeg = tempModel.RightLeg;
+            model.bipedHead = new PlatedArmorModel().Head;
 
             model.isSneak = livingEntity.isSneaking();
             model.isSitting = livingEntity.isPassenger();
@@ -33,6 +35,6 @@ public class ReinforcedLeggings extends ArmorItem {
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type)
     {
-        return Steampunk.MOD_ID+":textures/models/armor/reinforced_armor.png";
+        return Steampunk.MOD_ID+":textures/models/armor/titanium_armor.png";
     }
 }

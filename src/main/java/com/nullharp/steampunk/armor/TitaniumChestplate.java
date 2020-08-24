@@ -8,10 +8,11 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ItemStack;
 
-public class ReinforcedLeggings extends ArmorItem {
+public class TitaniumChestplate extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
-    public ReinforcedLeggings() {
-        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.TAB));
+
+    public TitaniumChestplate() {
+        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.TAB));
     }
 
     @Override
@@ -19,8 +20,9 @@ public class ReinforcedLeggings extends ArmorItem {
         if(this.model == null) {
             this.model = new BipedModel<>(1);
             PlatedArmorModel tempModel = new PlatedArmorModel();
-            model.bipedLeftLeg = tempModel.LeftLeg;
-            model.bipedRightLeg = tempModel.RightLeg;
+            model.bipedBody = tempModel.Body;
+            model.bipedLeftArm.addChild(tempModel.LeftArm);
+            model.bipedRightArm.addChild(tempModel.RightArm);
 
             model.isSneak = livingEntity.isSneaking();
             model.isSitting = livingEntity.isPassenger();
@@ -33,6 +35,6 @@ public class ReinforcedLeggings extends ArmorItem {
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type)
     {
-        return Steampunk.MOD_ID+":textures/models/armor/reinforced_armor.png";
+        return Steampunk.MOD_ID+":textures/models/armor/titanium_armor.png";
     }
 }

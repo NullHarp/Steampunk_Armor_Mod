@@ -20,7 +20,7 @@ public class CopperHelmet extends ArmorItem {
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
         if(this.model == null) {
-            this.model = new BipedModel(1);
+            this.model = new BipedModel<>(1);
             model.bipedHead = new CopperArmorModel().Head;
 
             model.isSneak = livingEntity.isSneaking();
