@@ -12,7 +12,7 @@ public class CopperLeggings extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
 
     public CopperLeggings() {
-        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.MAIN));
     }
 
     @Override

@@ -33,7 +33,7 @@ public class Steampunk
     private void doClientStuff(final FMLClientSetupEvent event) {
     }
 
-    public static final ItemGroup TAB = new ItemGroup("steampunkArmor") {
+    public static final ItemGroup MAIN = new ItemGroup("steampunk_armor") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(RegistryHandler.STEEL_INGOT.get());

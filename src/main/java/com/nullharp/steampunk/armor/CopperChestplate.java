@@ -12,7 +12,7 @@ public class CopperChestplate extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
 
     public CopperChestplate() {
-        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.CHEST, new Properties().group(Steampunk.MAIN));
     }
 
     @Override

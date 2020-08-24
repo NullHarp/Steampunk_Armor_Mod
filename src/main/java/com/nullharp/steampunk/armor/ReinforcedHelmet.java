@@ -13,7 +13,7 @@ public class ReinforcedHelmet extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
 
     public ReinforcedHelmet() {
-        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.HEAD, new Properties().group(Steampunk.MAIN));
     }
 
     @OnlyIn(Dist.CLIENT)

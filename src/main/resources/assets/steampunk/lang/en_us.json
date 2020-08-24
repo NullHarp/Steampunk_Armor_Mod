@@ -1,34 +1,37 @@
 {
-  "itemGroup.steampunkArmor" : "Steampunk Armor",
+  "itemGroup.steampunk_armor" : "Steampunk Armor",
 
   "item.steampunk.copper_ingot" : "Copper Ingot",
   "item.steampunk.raw_steel_ingot" : "Raw Steel Ingot",
   "item.steampunk.steel_ingot" : "Steel Ingot",
-  "item.steampunk.raw_titanium_ingot" : "Raw Titanium Ingot",
+  "item.steampunk.raw_titanium_ingot" : "Unrefined Rutile Ore",
   "item.steampunk.titanium_ingot" : "Titanium Ingot",
   "item.steampunk.titanium_steel_ingot" : "Titanium Infused Steel",
 
   "block.steampunk.titanium_ore_block" : "Rutile Ore",
   "block.steampunk.copper_ore_block" : "Copper Ore",
+  "block.steampunk.creative_powercell_block" : "Creative Powercell",
 
   "item.steampunk.copper_helmet" : "Copper Helmet",
   "item.steampunk.copper_chestplate" : "Copper Chestplate",
   "item.steampunk.copper_leggings" : "Copper Leggings",
   "item.steampunk.copper_boots" : "Copper Boots",
 
-  "item.steampunk.reinforced_helmet" : "Copper Helmet",
-  "item.steampunk.reinforced_chestplate" : "Copper Chestplate",
-  "item.steampunk.reinforced_leggings" : "Copper Leggings",
-  "item.steampunk.reinforced_boots" : "Copper Boots",
+  "item.steampunk.reinforced_helmet" : "Steel Plated Copper Helmet",
+  "item.steampunk.reinforced_chestplate" : "Steel Plated Copper Chestplate",
+  "item.steampunk.reinforced_leggings" : "Steel Plated Copper Leggings",
+  "item.steampunk.reinforced_boots" : "Steel Plated Copper Boots",
 
-  "item.steampunk.titanium_helmet" : "Titanium Plated Steel Helmet",
-  "item.steampunk.titanium_chestplate" : "Titanium Plated Steel Chestplate",
-  "item.steampunk.titanium_leggings" : "Titanium Plated Steel Leggings",
-  "item.steampunk.titanium_boots": "Titanium Plated Steel Boots",
+  "item.steampunk.titanium_steel_helmet" : "Titanium Plated Steel Helmet",
+  "item.steampunk.titanium_steel_chestplate" : "Titanium Plated Steel Chestplate",
+  "item.steampunk.titanium_steel_leggings" : "Titanium Plated Steel Leggings",
+  "item.steampunk.titanium_steel_boots": "Titanium Plated Steel Boots",
 
   "item.steampunk.power_core_off" : "Empty Power Core",
   "item.steampunk.power_core_on" : "Charged Power Core",
 
   "item.steampunk.stickbug_disk" : "§bMusic Disc",
-  "item.steampunk.stickbug_disk.desc" : "Onett - stickbug"
+  "item.steampunk.stickbug_disk.desc" : "Onett - stickbug",
+
+  "item.steampunk.test_tooltips" : "Test - Tooltips"
 }

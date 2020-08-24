@@ -2,19 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "xxx",
+    "x x",
     "xyx",
-    "xxx"
+    "xzx"
   ],
   "key":
   {
     "x":
     {
-      "item": "minecraft:iron_ingot"
+      "tag": "steampunk:titanium_steel_ingot"
     },
     "y":
     {
-      "item": "minecraft:coal"
+      "item": "steampunk:power_core_on"
+    },
+    "z":
+    {
+      "item": "steampunk:steel_ingot"
     }
   },
   "result":

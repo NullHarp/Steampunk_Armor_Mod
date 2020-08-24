@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 public class ReinforcedLeggings extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
     public ReinforcedLeggings() {
-        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.LEGS, new Properties().group(Steampunk.MAIN));
     }
 
     @Override

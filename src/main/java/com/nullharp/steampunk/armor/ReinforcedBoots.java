@@ -12,7 +12,7 @@ public class ReinforcedBoots extends ArmorItem {
     private BipedModel<LivingEntity> model = null;
 
     public ReinforcedBoots() {
-        super(Copper.COPPER, EquipmentSlotType.FEET, new Properties().group(Steampunk.TAB));
+        super(Copper.COPPER, EquipmentSlotType.FEET, new Properties().group(Steampunk.MAIN));
     }
 
     @Override
