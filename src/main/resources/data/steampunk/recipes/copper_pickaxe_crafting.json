@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "zzz",
+    " y ",
+    " y "
+  ],
+  "key":
+  {
+    "z":
+    {
+      "item": "steampunk:copper_ingot"
+    },
+    "y":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:copper_pickaxe_tool",
+    "count": 1
+  }
+}

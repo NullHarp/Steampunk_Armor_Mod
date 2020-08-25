@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " z ",
+    " y ",
+    " y "
+  ],
+  "key":
+  {
+    "z":
+    {
+      "item": "steampunk:steel_ingot"
+    },
+    "y":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:reinforced_shovel_tool",
+    "count": 1
+  }
+}

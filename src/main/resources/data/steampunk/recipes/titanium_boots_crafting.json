@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "x x",
+    "z z"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "steampunk:titanium_steel_ingot"
+    },
+    "z":
+    {
+      "item": "steampunk:steel_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:titanium_boots",
+    "count": 1
+  }
+}

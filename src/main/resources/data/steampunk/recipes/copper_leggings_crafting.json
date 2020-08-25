@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "zzz",
+    "z z",
+    "z z"
+  ],
+  "key":
+  {
+    "z":
+    {
+      "item": "steampunk:copper_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:copper_leggings",
+    "count": 1
+  }
+}

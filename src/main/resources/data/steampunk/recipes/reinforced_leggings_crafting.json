@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xzx",
+    "x x",
+    "z z"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "steampunk:copper_ingot"
+    },
+    "z":
+    {
+      "item": "steampunk:steel_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:reinforced_leggings",
+    "count": 1
+  }
+}

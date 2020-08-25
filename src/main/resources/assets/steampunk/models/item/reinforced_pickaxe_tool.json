@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "steampunk:items/reinforced_pickaxe_tool"
+  }
+}

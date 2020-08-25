@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    "xyx",
+    "xzx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "steampunk:copper_ingot"
+    },
+    "z":
+    {
+      "item": "steampunk:steel_ingot"
+    },
+    "y":
+    {
+      "item": "steampunk:power_core_on"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:reinforced_chestplate",
+    "count": 1
+  }
+}

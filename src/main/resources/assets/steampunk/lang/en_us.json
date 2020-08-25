@@ -12,6 +12,24 @@
   "block.steampunk.copper_ore_block" : "Copper Ore",
   "block.steampunk.creative_powercell_block" : "Creative Powercell",
 
+  "item.steampunk.copper_sword_tool" : "Copper Sword",
+  "item.steampunk.copper_pickaxe_tool" : "Copper Pickaxe",
+  "item.steampunk.copper_shovel_tool" : "Copper Shovel",
+  "item.steampunk.copper_axe_tool" : "Copper Axe",
+  "item.steampunk.copper_hoe_tool" : "Copper Hoe",
+
+  "item.steampunk.reinforced_sword_tool" : "Reinforced Copper Sword",
+  "item.steampunk.reinforced_pickaxe_tool" : "Reinforced Copper Pickaxe",
+  "item.steampunk.reinforced_shovel_tool" : "Reinforced Copper Shovel",
+  "item.steampunk.reinforced_axe_tool" : "Reinforced Copper Axe",
+  "item.steampunk.reinforced_hoe_tool" : "Reinforced Copper Hoe",
+
+  "item.steampunk.titanium_steel_sword_tool" : "Titanium Infused Copper Sword",
+  "item.steampunk.titanium_steel_pickaxe_tool" : "Titanium Infused Copper Pickaxe",
+  "item.steampunk.titanium_steel_shovel_tool" : "Titanium Infused Copper Shovel",
+  "item.steampunk.titanium_steel_axe_tool" : "Titanium Infused Copper Axe",
+  "item.steampunk.titanium_steel_hoe_tool" : "Titanium Infused Copper Hoe",
+
   "item.steampunk.copper_helmet" : "Copper Helmet",
   "item.steampunk.copper_chestplate" : "Copper Chestplate",
   "item.steampunk.copper_leggings" : "Copper Leggings",
@@ -22,10 +40,10 @@
   "item.steampunk.reinforced_leggings" : "Steel Plated Copper Leggings",
   "item.steampunk.reinforced_boots" : "Steel Plated Copper Boots",
 
-  "item.steampunk.titanium_steel_helmet" : "Titanium Plated Steel Helmet",
-  "item.steampunk.titanium_steel_chestplate" : "Titanium Plated Steel Chestplate",
-  "item.steampunk.titanium_steel_leggings" : "Titanium Plated Steel Leggings",
-  "item.steampunk.titanium_steel_boots": "Titanium Plated Steel Boots",
+  "item.steampunk.titanium_helmet" : "Titanium Plated Steel Helmet",
+  "item.steampunk.titanium_chestplate" : "Titanium Plated Steel Chestplate",
+  "item.steampunk.titanium_leggings" : "Titanium Plated Steel Leggings",
+  "item.steampunk.titanium_boots": "Titanium Plated Steel Boots",
 
   "item.steampunk.power_core_off" : "Empty Power Core",
   "item.steampunk.power_core_on" : "Charged Power Core",
@@ -33,5 +51,14 @@
   "item.steampunk.stickbug_disk" : "§bMusic Disc",
   "item.steampunk.stickbug_disk.desc" : "Onett - stickbug",
 
-  "item.steampunk.test_tooltips" : "Test - Tooltips"
+  "item.steampunk.test_tooltips" : "Test - Tooltips",
+
+  "advancements.steampunkArmor.title" : "Steampunk Armor",
+  "advancements.steampunkArmor.desc" : "Steampunk era armor with special properties!",
+
+  "advancements.makeRawSteel.title" : "Industrial Revolution!",
+  "advancements.makeRawSteel.desc" : "Make your first piece of raw steel",
+
+  "advancements.getSteel.title" : "What's this?",
+  "advancements.getSteel.desc" : "Smelt your first piece of  Pure Steel"
 }

@@ -3,23 +3,23 @@
   "pattern":
   [
     "xxx",
-    "xyx",
-    "xxx"
+    "z z",
+    "   "
   ],
   "key":
   {
     "x":
     {
-      "item": "minecraft:coal"
+      "item": "steampunk:copper_ingot"
     },
-    "y":
+    "z":
     {
-      "item": "minecraft:iron_ingot"
+      "item": "steampunk:steel_ingot"
     }
   },
   "result":
   {
-    "item": "steampunk:raw_steel_ingot",
+    "item": "steampunk:reinforced_helmet",
     "count": 1
   }
 }

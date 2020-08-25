@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "xxx",
+    "x x",
     "xyx",
     "xxx"
   ],
@@ -10,16 +10,16 @@
   {
     "x":
     {
-      "item": "minecraft:coal"
+      "item": "steampunk:copper_ingot"
     },
     "y":
     {
-      "item": "minecraft:iron_ingot"
+      "item": "steampunk:power_core_on"
     }
   },
   "result":
   {
-    "item": "steampunk:raw_steel_ingot",
+    "item": "steampunk:copper_chestplate",
     "count": 1
   }
 }

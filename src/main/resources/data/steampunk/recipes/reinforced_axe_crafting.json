@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " zx",
+    " yz",
+    " y "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "steampunk:steel_ingot"
+    },
+    "z":
+    {
+      "item": "steampunk:copper_ingot"
+    },
+    "y":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "steampunk:reinforced_axe_tool",
+    "count": 1
+  }
+}
