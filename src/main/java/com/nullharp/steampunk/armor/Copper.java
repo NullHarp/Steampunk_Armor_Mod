@@ -76,4 +76,9 @@ public enum Copper implements IArmorMaterial {
     public float getToughness() {
         return this.toughness;
     }
+
+    @Override
+    public float getKnockbackResistance() {
+        return 0;
+    }
 }

@@ -12,6 +12,7 @@ public class CopperOreBlock extends Block {
                     .sound(SoundType.STONE)
                     .harvestTool(ToolType.PICKAXE)
                     .harvestLevel(2)
+                    .setRequiresTool()
         );
     }
 }

@@ -14,7 +14,7 @@ public class CreativePowercellBlock extends Block {
                     .sound(SoundType.GLASS)
                     .harvestTool(ToolType.PICKAXE)
                     .harvestLevel(2)
-                    
+                    .setRequiresTool()
         );
     }
 }

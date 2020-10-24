@@ -12,6 +12,7 @@ public class TitaniumOreBlock extends Block {
                     .sound(SoundType.METAL)
                     .harvestTool(ToolType.PICKAXE)
                     .harvestLevel(3)
+                    .setRequiresTool()
         );
     }
 }

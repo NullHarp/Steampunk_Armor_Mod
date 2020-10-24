@@ -1,50 +1,24 @@
-
-modLoader="javafml" #mandatory
-
-loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
-
-[[mods]] #mandatory
-
+modLoader="javafml"
+loaderVersion="[34,)"
+license="All rights reserved"
+[[mods]]
 modId="steampunk" #mandatory
-
-version="1.15.2-0.1" #mandatory
-
+version="${file.jarVersion}" #mandatory
 displayName="Steampunk Armor" #mandatory
-
-updateJSONURL="http://myurl.me/" #optional
-
-logoFile="steampunk_armor_logo.png" #optional
-
-authors="Nullharp, RealTonyGamer" #optional
-
 description='''
 This mod adds new Armor that has Special abilities that are themed around steampunk era equipment.
 '''
-[[dependencies.steampunk]] #optional
-    # the modid of the dependency
-    modId="forge" #mandatory
-
-    # Does this dependency have to exist - if not, ordering below must be specified
-    mandatory=true #mandatory
-
-    # The version range of the dependency
-    versionRange="[31,)" #mandatory
-
-    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.steampunk]]
+    modId="forge"
+    mandatory=true
+    versionRange="[34,)"
     ordering="NONE"
-
-    # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
-
 # Here's another dependency
 [[dependencies.steampunk]]
-
     modId="minecraft"
-
     mandatory=true
-
-    versionRange="[1.15.2]"
-
+    versionRange="[1.16.3]"
     ordering="NONE"
-
     side="BOTH"
